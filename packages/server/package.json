@@ -1,0 +1,24 @@
+{
+  "name": "@ai-usage/server",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ai-usage-service": "./bin/ai-usage-service.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@ai-usage/shared": "workspace:*",
+    "@fastify/helmet": "13.1.1",
+    "@fastify/rate-limit": "11.2.0",
+    "commander": "15.0.0",
+    "fastify": "5.12.1",
+    "fastify-type-provider-zod": "7.0.0",
+    "zod": "4.5.4"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

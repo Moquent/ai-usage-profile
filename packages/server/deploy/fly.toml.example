@@ -1,0 +1,35 @@
+app = "your-ai-usage-profile"
+primary_region = "iad"
+
+[build]
+
+[env]
+  AI_USAGE_DATABASE_PATH = "/data/ai-usage-profile.sqlite"
+  AI_USAGE_HOST = "0.0.0.0"
+  AI_USAGE_PUBLIC_BASE_URL = "https://your-ai-usage-profile.fly.dev"
+  AI_USAGE_TRUST_PROXY = "true"
+  PORT = "3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[mounts]
+  source = "ai_usage_data"
+  destination = "/data"
+
+[[http_service.checks]]
+  grace_period = "5s"
+  interval = "30s"
+  method = "GET"
+  timeout = "3s"
+  path = "/readyz"

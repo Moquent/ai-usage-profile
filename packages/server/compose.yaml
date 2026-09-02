@@ -1,0 +1,23 @@
+services:
+  ai-usage-profile:
+    build:
+      context: ../..
+      dockerfile: packages/server/Dockerfile
+    restart: unless-stopped
+    environment:
+      AI_USAGE_ADMIN_KEY: ${AI_USAGE_ADMIN_KEY:?set AI_USAGE_ADMIN_KEY}
+      AI_USAGE_PUBLIC_BASE_URL: ${AI_USAGE_PUBLIC_BASE_URL:?set AI_USAGE_PUBLIC_BASE_URL}
+      AI_USAGE_TRUST_PROXY: "true"
+      AI_USAGE_LOG_LEVEL: info
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ai-usage-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  ai-usage-data:
