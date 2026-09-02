@@ -1,0 +1,33 @@
+{
+  "name": "@ai-usage/shared",
+  "version": "0.6.0",
+  "type": "module",
+  "description": "Shared schemas and API helpers for AI Usage Profile.",
+  "license": "MIT",
+  "homepage": "https://github.com/Moquent/ai-usage-profile#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moquent/ai-usage-profile.git",
+    "directory": "packages/shared"
+  },
+  "bugs": {
+    "url": "https://github.com/Moquent/ai-usage-profile/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "ofetch": "1.5.1",
+    "zod": "4.5.4"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

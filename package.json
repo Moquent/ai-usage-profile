@@ -1,0 +1,22 @@
+{
+  "name": "ai-usage-profile-monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.24.0",
+  "scripts": {
+    "check": "eslint . && NODE_OPTIONS=--experimental-vm-modules jest",
+    "lint": "eslint .",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "publish:npm": "pnpm --filter @ai-usage/shared publish --access public --no-git-checks && pnpm --filter ai-usage-profile publish --access public --no-git-checks"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.9.1",
+    "globals": "16.4.0",
+    "jest": "29.7.0"
+  }
+}

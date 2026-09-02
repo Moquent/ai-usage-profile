@@ -1,0 +1,25 @@
+{
+  "provider": {
+    "id": "codex",
+    "name": "Codex",
+    "source": "OpenAI Codex App Server"
+  },
+  "account": {
+    "plan": "Pro"
+  },
+  "metrics": {
+    "lifetimeTokens": 5100000000,
+    "peakDailyTokens": 976500000,
+    "longestRunningTurnSec": 44820,
+    "currentStreakDays": 4,
+    "longestStreakDays": 9
+  },
+  "daily": [
+    { "date": "2026-08-20", "tokens": 1200000 },
+    { "date": "2026-08-21", "tokens": 8500000 },
+    { "date": "2026-08-23", "tokens": 28000000 },
+    { "date": "2026-08-24", "tokens": 95000000 },
+    { "date": "2026-08-25", "tokens": 310000000 },
+    { "date": "2026-08-26", "tokens": 976500000 }
+  ]
+}

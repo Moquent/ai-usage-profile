@@ -1,0 +1,55 @@
+{
+  "name": "ai-usage-profile",
+  "version": "0.6.0",
+  "type": "module",
+  "description": "Publish account-wide AI usage to a hosted GitHub profile card.",
+  "homepage": "https://github.com/Moquent/ai-usage-profile#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moquent/ai-usage-profile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Moquent/ai-usage-profile/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "ai-usage-profile": "./bin/ai-usage-profile.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "prepack": "NODE_OPTIONS=--experimental-vm-modules jest --config ../../jest.config.cjs --testPathPattern=packages/client/test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "claude-code",
+    "ai-usage",
+    "github-profile",
+    "readme",
+    "svg",
+    "usage"
+  ],
+  "dependencies": {
+    "@ai-usage/shared": "workspace:*",
+    "@octokit/auth-oauth-device": "8.0.5",
+    "commander": "15.0.0",
+    "execa": "9.6.0",
+    "json-rpc-2.0": "1.8.0"
+  },
+  "devDependencies": {
+    "@ai-usage/server": "workspace:*"
+  }
+}
