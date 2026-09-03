@@ -24,10 +24,33 @@ export function schedulePaths(stateDir) {
   };
 }
 
-export function userPathEnvironment(home = os.homedir()) {
-  const extra = [path.join(home, "bin"), "/usr/local/bin", "/opt/homebrew/bin", "/usr/bin", "/bin"];
-  const current = process.env.PATH ?? "";
-  return [...new Set([...extra, ...current.split(path.delimiter).filter(Boolean)])].join(path.delimiter);
+function platformPath(platform, ...segments) {
+  return platform === "win32" ? path.win32.join(...segments) : path.join(...segments);
+}
+
+export function userPathEnvironment(home = os.homedir(), platform = process.platform, pathEnv = process.env.PATH) {
+  const delimiter = platform === "win32" ? ";" : path.delimiter;
+  const extra = [platformPath(platform, home, "bin")];
+  if (platform === "win32") {
+    const localAppData = platformPath(platform, home, "AppData", "Local");
+    const appData = platformPath(platform, home, "AppData", "Roaming");
+    extra.push(
+      platformPath(platform, appData, "npm"),
+      platformPath(platform, localAppData, "Programs"),
+      platformPath(platform, localAppData, "Programs", "codex"),
+      platformPath(platform, localAppData, "Microsoft", "WindowsApps"),
+    );
+  } else {
+    extra.push(
+      platformPath(platform, home, ".local", "bin"),
+      "/usr/local/bin",
+      "/opt/homebrew/bin",
+      "/usr/bin",
+      "/bin",
+    );
+  }
+  const current = pathEnv ?? "";
+  return [...new Set([...extra, ...current.split(delimiter).filter(Boolean)])].join(delimiter);
 }
 
 export async function writeJson(filePath, value) {
@@ -46,10 +69,10 @@ export function buildPublishArgv({ nodePath, cliPath }) {
   return [nodePath, cliPath, "publish"];
 }
 
-function scheduleEnvironment({ home, endpoint }) {
+function scheduleEnvironment({ home, endpoint, platform = process.platform }) {
   return {
     HOME: home,
-    PATH: userPathEnvironment(home),
+    PATH: userPathEnvironment(home, platform),
     AI_USAGE_ENDPOINT: endpoint,
   };
 }
@@ -93,8 +116,12 @@ ${environment}
 
 export function buildWindowsCommand(context) {
   const env = scheduleEnvironment(context);
+  const extraPath = userPathEnvironment(env.HOME, "win32", "");
   const command = buildPublishArgv(context).map((value) => `"${value}"`).join(" ");
   return `@echo off\r
+set "USERPROFILE=${env.HOME}"\r
+set "HOME=${env.HOME}"\r
+set "PATH=${extraPath};%PATH%"\r
 set "AI_USAGE_ENDPOINT=${env.AI_USAGE_ENDPOINT}"\r
 cd /d "${context.workingDirectory}"\r
 ${command}\r
@@ -286,6 +313,7 @@ async function uninstallCrontab(options) {
 
 function scheduleContext(options) {
   const paths = pathsOf(options);
+  const platform = options.platform ?? process.platform;
   return {
     nodePath: options.nodePath,
     cliPath: options.cliPath,
@@ -294,6 +322,7 @@ function scheduleContext(options) {
     logPath: options.logPath ?? paths.logPath,
     home: options.home ?? os.homedir(),
     intervalHours: options.intervalHours,
+    platform,
   };
 }
 

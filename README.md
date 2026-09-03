@@ -6,7 +6,7 @@ One command on your laptop. One image in your README. Done.
 
 ## Quick start
 
-You need **Node 22.13+** and **Codex signed in** on that machine (`codex login`).
+You need **Node 22.13+** and **Codex signed in** on that machine (`codex login`). Works on **macOS**, **Linux**, and **Windows** (PowerShell or Git Bash).
 
 ```bash
 npx ai-usage-profile setup
@@ -29,7 +29,9 @@ That’s it. `setup` will:
 2. Ask you to approve GitHub in the browser (device login — empty scopes)
 3. Publish your usage snapshot to the hosted origin
 4. Print a README snippet to paste into your profile
-5. Install a background schedule (LaunchAgent on macOS) — runs on login and about every 2 hours while your laptop is awake
+5. Install a background schedule — LaunchAgent on macOS, systemd (or crontab fallback) on Linux, Task Scheduler on Windows — runs on login and about every 2 hours while your computer is awake
+
+Set `CODEX_BIN` if the Codex CLI is not on your PATH (uncommon after `setup` installs the schedule with common install locations).
 
 Already set up once? Push fresh stats anytime:
 

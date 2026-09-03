@@ -47,7 +47,8 @@
     "@octokit/auth-oauth-device": "8.0.5",
     "commander": "15.0.0",
     "execa": "9.6.0",
-    "json-rpc-2.0": "1.8.0"
+    "json-rpc-2.0": "1.8.0",
+    "which": "6.0.0"
   },
   "devDependencies": {
     "@ai-usage-profile/server": "workspace:*"

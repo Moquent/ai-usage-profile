@@ -1,13 +1,21 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
+import os from "node:os";
 import readline from "node:readline";
 import { setTimeout as delay } from "node:timers/promises";
 import { JSONRPCClient } from "json-rpc-2.0";
+import which from "which";
 import { PROVIDER_CATALOG, parseUsageSnapshot } from "@ai-usage-profile/shared";
+import { userPathEnvironment } from "./local/schedule.js";
 import packageJson from "../package.json" with { type: "json" };
 
 const DEFAULT_TIMEOUT_MS = 30_000;
 const DEFAULT_ARGS = Object.freeze(["app-server", "--stdio"]);
+
+const DARWIN_CODEX_BUNDLES = Object.freeze([
+  "/Applications/ChatGPT.app/Contents/Resources/codex",
+  "/Applications/Codex.app/Contents/Resources/codex",
+]);
 
 const PLAN_LABELS = Object.freeze({
   free: "Free",
@@ -25,13 +33,19 @@ const PLAN_LABELS = Object.freeze({
 
 export async function resolveCodexBinary(environment = process.env) {
   if (environment.CODEX_BIN) return environment.CODEX_BIN;
-  const candidates = process.platform === "darwin"
-    ? [
-        "/Applications/ChatGPT.app/Contents/Resources/codex",
-        "/Applications/Codex.app/Contents/Resources/codex",
-      ]
-    : [];
-  return candidates.find((candidate) => existsSync(candidate)) ?? "codex";
+
+  const platform = process.platform;
+  if (platform === "darwin") {
+    const bundled = DARWIN_CODEX_BUNDLES.find((candidate) => existsSync(candidate));
+    if (bundled) return bundled;
+  }
+
+  const home = environment.HOME ?? environment.USERPROFILE ?? os.homedir();
+  const onPath = which.sync("codex", {
+    path: userPathEnvironment(home, platform, environment.PATH),
+    nothrow: true,
+  });
+  return onPath ?? "codex";
 }
 
 export class CodexAppServerClient {

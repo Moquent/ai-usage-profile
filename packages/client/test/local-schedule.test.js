@@ -14,6 +14,7 @@ import {
   removeCrontabBlock,
   uninstallSchedule,
   upsertCrontab,
+  userPathEnvironment,
 } from "../src/local/schedule.js";
 
 const scheduleContext = {
@@ -36,6 +37,9 @@ describe("local schedule", () => {
     expect(plist).toMatch(/<string>https:\/\/aiusage\.teje\.sh<\/string>/);
 
     const windows = buildWindowsCommand({ ...scheduleContext, home: "/home/user" });
+    expect(windows).toMatch(/set "USERPROFILE=\/home\/user"/);
+    expect(windows).toMatch(/set "PATH=/);
+    expect(windows).toMatch(/%PATH%/);
     expect(windows).toMatch(/cd \/d "\/home\/user\/\.ai-usage"/);
     expect(windows).toMatch(/"\/usr\/local\/bin\/node".*"publish"/);
     expect(windows).not.toMatch(/--config/);
@@ -58,6 +62,24 @@ describe("local schedule", () => {
     expect(second).toMatch(/17 \*\/3 \* \* \*/);
     expect(removeCrontabBlock(second).includes("ai-usage-profile")).toBe(false);
     expect(removeCrontabBlock(second)).toMatch(/echo other/);
+  });
+
+  it("adds platform-specific PATH entries for scheduled publish", () => {
+    const linuxPath = userPathEnvironment("/home/user", "linux");
+    expect(linuxPath.split(":")).toEqual(
+      expect.arrayContaining(["/home/user/.local/bin", "/usr/local/bin", "/opt/homebrew/bin"]),
+    );
+
+    const windowsPath = userPathEnvironment("C:\\Users\\alice", "win32");
+    expect(windowsPath.split(";")).toEqual(
+      expect.arrayContaining([
+        "C:\\Users\\alice\\bin",
+        "C:\\Users\\alice\\AppData\\Roaming\\npm",
+        "C:\\Users\\alice\\AppData\\Local\\Programs",
+        "C:\\Users\\alice\\AppData\\Local\\Programs\\codex",
+        "C:\\Users\\alice\\AppData\\Local\\Microsoft\\WindowsApps",
+      ]),
+    );
   });
 
   it("installs a launch agent on macOS", async () => {

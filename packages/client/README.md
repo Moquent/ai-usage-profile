@@ -30,7 +30,7 @@ API on demand.
 
 ## Install
 
-Requirements: Node.js 22.13+, Codex signed in on this computer.
+Requirements: Node.js 22.13+, Codex signed in on this computer. Supports **macOS**, **Linux**, and **Windows** (native PowerShell or Git Bash).
 
 ```bash
 npx ai-usage-profile setup
@@ -48,8 +48,9 @@ That command:
 3. Stores the GitHub token in `~/.ai-usage/credentials.json` (`0600`).
 4. Fetches usage locally and `PUT`s the snapshot to the origin as
    `Authorization: Bearer <github_token>`.
-5. Installs a user-level schedule (LaunchAgent, systemd / crontab, or Task
-   Scheduler) that re-publishes every two hours while the computer is awake.
+5. Installs a user-level schedule (LaunchAgent on macOS, systemd or crontab on Linux, Task Scheduler on Windows) that re-publishes every two hours while the computer is awake.
+
+If Codex is installed outside your shell PATH, set `CODEX_BIN` to the full path to the `codex` binary before `setup`.
 
 The origin calls `GET https://api.github.com/user` and binds the card to that
 login. It does not store the GitHub token.
