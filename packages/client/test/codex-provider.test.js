@@ -1,9 +1,10 @@
+import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { chmod, mkdir, mkdtemp, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { getProviderMetadata } from "@ai-usage-profile/shared";
-import { CodexProvider, CodexAppServerClient, resolveCodexBinary } from "../src/codex.js";
+import { CodexProvider, CodexAppServerClient, resolveCodexBinary, DARWIN_CODEX_BUNDLES } from "../src/codex.js";
 import { userPathEnvironment } from "../src/local/schedule.js";
 
 const fixture = fileURLToPath(new URL("../test-support/fake-app-server.js", import.meta.url));
@@ -49,6 +50,13 @@ describe("Codex provider", () => {
 
   it("honors CODEX_BIN and resolves codex from augmented PATH", async () => {
     await expect(resolveCodexBinary({ CODEX_BIN: "/custom/codex" })).resolves.toBe("/custom/codex");
+
+    if (process.platform === "darwin") {
+      const bundled =
+        DARWIN_CODEX_BUNDLES.find((candidate) => existsSync(candidate)) ?? "codex";
+      await expect(resolveCodexBinary({ PATH: "" })).resolves.toBe(bundled);
+      return;
+    }
 
     const home = await mkdtemp(path.join(os.tmpdir(), "ai-usage-codex-"));
     const codexPath = path.join(home, ".local", "bin", "codex");

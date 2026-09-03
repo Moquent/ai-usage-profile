@@ -17,6 +17,8 @@ const DARWIN_CODEX_BUNDLES = Object.freeze([
   "/Applications/Codex.app/Contents/Resources/codex",
 ]);
 
+export { DARWIN_CODEX_BUNDLES };
+
 const PLAN_LABELS = Object.freeze({
   free: "Free",
   go: "Go",
