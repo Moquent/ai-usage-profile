@@ -2,7 +2,7 @@ import { createHash, randomBytes, randomUUID, timingSafeEqual } from "node:crypt
 import { mkdirSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { DatabaseSync } from "node:sqlite";
-import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage-profile/shared";
+import { parseStoredPresentation, publishEnvelopeSchema } from "@ai-usage-profile/shared";
 
 const TOKEN_PREFIX = "aup_v1";
 
@@ -20,11 +20,20 @@ export function hashCredential(value) {
 
 export const GITHUB_BOUND_TOKEN_HASH = hashCredential("github-bound");
 
+export function credentialHashEquals(leftHash, rightHash) {
+  if (typeof leftHash !== "string" || typeof rightHash !== "string") return false;
+  const left = Buffer.from(leftHash);
+  const right = Buffer.from(rightHash);
+  return left.length === right.length && timingSafeEqual(left, right);
+}
+
 export function credentialsEqual(candidate, expectedHash) {
   if (typeof candidate !== "string" || typeof expectedHash !== "string") return false;
-  const candidateHash = Buffer.from(hashCredential(candidate));
-  const expected = Buffer.from(expectedHash);
-  return candidateHash.length === expected.length && timingSafeEqual(candidateHash, expected);
+  return credentialHashEquals(hashCredential(candidate), expectedHash);
+}
+
+export function isGitHubBoundProfile(profile) {
+  return profile && credentialHashEquals(profile.publishTokenHash, GITHUB_BOUND_TOKEN_HASH);
 }
 
 const migrationsUrl = new URL("../../migrations/", import.meta.url);
@@ -48,7 +57,7 @@ function mapProfile(row) {
     slug: row.slug,
     githubUserId: row.github_user_id ?? null,
     providerId: row.provider_id,
-    card: presentationConfigSchema.parse(JSON.parse(row.card_config)),
+    card: parseStoredPresentation(row.card_config),
     publishTokenHash: row.publish_token_hash,
     createdAt: row.created_at,
     updatedAt: row.updated_at,

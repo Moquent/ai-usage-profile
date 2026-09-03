@@ -47,7 +47,7 @@ describe("GitHub authentication", () => {
     expect(token).toBe("gho_device_token");
   });
 
-  it("prefers an explicit client id over the built-in default", async () => {
+  it("uses an explicit client id for device login", async () => {
     await loginWithDeviceFlow({
       clientId: "custom-client-id",
       createAuth: (options) => {

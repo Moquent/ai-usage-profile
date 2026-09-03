@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync } from "node:fs";
 import pg from "pg";
-import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage-profile/shared";
+import { parseStoredPresentation, publishEnvelopeSchema } from "@ai-usage-profile/shared";
 
 const migrationsUrl = new URL("../../migrations/postgres/", import.meta.url);
 
@@ -12,7 +12,7 @@ function mapProfile(row) {
     slug: row.slug,
     githubUserId: row.github_user_id ?? null,
     providerId: row.provider_id,
-    card: presentationConfigSchema.parse(JSON.parse(row.card_config)),
+    card: parseStoredPresentation(row.card_config),
     publishTokenHash: row.publish_token_hash,
     createdAt: row.created_at.toISOString(),
     updatedAt: row.updated_at.toISOString(),

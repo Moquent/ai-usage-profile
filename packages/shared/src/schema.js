@@ -78,9 +78,10 @@ export const PROVIDER_CATALOG = Object.freeze({
   }),
 });
 
+/** Default public hosted origin — override with `AI_USAGE_ENDPOINT` or `--endpoint`. */
 export const DEFAULT_PUBLIC_ORIGIN = "https://aiusage.teje.sh";
 
-/** Public OAuth App client id for GitHub device login (not a secret). */
+/** Public OAuth App client id for device login on the default hosted origin (not a secret). */
 export const DEFAULT_GITHUB_OAUTH_CLIENT_ID = "Ov23li8itwuDv2LS0tI0";
 
 export function listProviders() {
@@ -293,6 +294,14 @@ export const publishResponseSchema = z.object({
   receivedAt: z.iso.datetime({ offset: true }),
   cardUrl: z.url(),
 });
+
+export function parseStoredPresentation(input) {
+  const card = typeof input === "string" ? JSON.parse(input) : input;
+  return presentationConfigSchema.parse({
+    ...card,
+    ...(card.layout === undefined ? {} : { layout: normalizeLayout(card.layout) }),
+  });
+}
 
 export function parseUsageSnapshot(input) {
   return usageSnapshotSchema.parse(input);

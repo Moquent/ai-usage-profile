@@ -36,7 +36,7 @@ Requirements: Node.js 22.13+, Codex signed in on this computer.
 npx ai-usage-profile setup
 ```
 
-Device login uses a built-in public OAuth client id. Set `AI_USAGE_GITHUB_CLIENT_ID` to override.
+Device login uses a built-in OAuth App client id for the default hosted origin. Set `AI_USAGE_GITHUB_CLIENT_ID` to override.
 
 From a git clone, run `node packages/client/bin/ai-usage-profile.js setup` after `pnpm install`.
 

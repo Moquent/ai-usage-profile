@@ -236,6 +236,77 @@ describe("hosted service", () => {
     }
   });
 
+  it("serves legal pages and home", async () => {
+    const app = await createHostedService({ adminKey: ADMIN_KEY, logger: false });
+    try {
+      const home = await app.inject({ method: "GET", url: "/" });
+      const privacy = await app.inject({ method: "GET", url: "/privacy" });
+      const terms = await app.inject({ method: "GET", url: "/terms" });
+      expect(home.statusCode).toBe(200);
+      expect(home.headers["content-type"]).toMatch(/text\/html/);
+      expect(home.body).toMatch(/AI Usage Profile|npx ai-usage-profile setup/);
+      expect(home.body).not.toMatch(/teje\.sh|moquent/i);
+      expect(privacy.statusCode).toBe(200);
+      expect(privacy.headers["content-type"]).toMatch(/text\/html/);
+      expect(privacy.body).toMatch(/Privacy Policy|do not store/i);
+      expect(terms.statusCode).toBe(200);
+      expect(terms.body).toMatch(/Terms of Service|Limitation of liability/i);
+    } finally {
+      await app.close();
+    }
+  });
+
+  it("rejects publisher-token publish for GitHub-bound profiles", async () => {
+    const app = await createHostedService({
+      adminKey: ADMIN_KEY,
+      logger: false,
+      lookupGitHubUser: async () => ({ id: 1, login: "Moquent", slug: "moquent" }),
+    });
+    try {
+      const published = await app.inject({
+        method: "PUT",
+        url: "/v1/me/snapshot",
+        headers: { authorization: "Bearer gho_test" },
+        payload: {
+          schemaVersion: 1,
+          collectedAt: "2026-08-30T12:00:00.000Z",
+          snapshot,
+        },
+      });
+      expect(published.statusCode).toBe(200);
+
+      const status = await app.inject({
+        method: "GET",
+        url: "/v1/me/status",
+        headers: { authorization: "Bearer gho_test" },
+      });
+      const profileId = status.json().profileId;
+
+      const viaBoundToken = await app.inject({
+        method: "PUT",
+        url: `/v1/profiles/${profileId}/snapshot`,
+        headers: { authorization: "Bearer github-bound" },
+        payload: {
+          schemaVersion: 1,
+          collectedAt: "2026-08-30T12:01:00.000Z",
+          snapshot,
+        },
+      });
+      expect(viaBoundToken.statusCode).toBe(401);
+      expect(viaBoundToken.json().message).toMatch(/GitHub authentication only/i);
+
+      const rotateToken = await app.inject({
+        method: "POST",
+        url: `/v1/profiles/${profileId}/token`,
+        headers: { authorization: `Bearer ${ADMIN_KEY}` },
+      });
+      expect(rotateToken.statusCode).toBe(409);
+      expect(rotateToken.json().error).toBe("github_bound_profile");
+    } finally {
+      await app.close();
+    }
+  });
+
   it("returns 503 when GitHub validation is unavailable", async () => {
     const app = await createHostedService({
       adminKey: ADMIN_KEY,
@@ -320,6 +391,31 @@ describe("hosted service", () => {
       });
       expect(first.json().status).toBe("updated");
       expect(second.json().status).toBe("unchanged");
+    } finally {
+      await app.close();
+    }
+  });
+
+  it("returns 503 when object store card delete fails", async () => {
+    const app = await createHostedService({
+      adminKey: ADMIN_KEY,
+      logger: false,
+      cardStore: {
+        async deleteCards() {
+          throw new Error("s3 unavailable");
+        },
+      },
+    });
+    try {
+      const profile = await createProfile(app);
+      const response = await app.inject({
+        method: "DELETE",
+        url: `/v1/profiles/${profile.id}`,
+        headers: { authorization: `Bearer ${ADMIN_KEY}` },
+      });
+      expect(response.statusCode).toBe(503);
+      expect(response.json().error).toBe("card_delete_failed");
+      expect(await app.profileRepository.getProfileById(profile.id)).not.toBeNull();
     } finally {
       await app.close();
     }
