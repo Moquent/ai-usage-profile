@@ -3,7 +3,7 @@ import os from "node:os";
 import { fileURLToPath } from "node:url";
 import { createOAuthDeviceAuth } from "@octokit/auth-oauth-device";
 import { execa } from "execa";
-import { publicCardUrl, publishProviderSnapshot, resolvePublicOrigin, verifyGitHubUser, DEFAULT_GITHUB_OAUTH_CLIENT_ID } from "@ai-usage/shared";
+import { publicCardUrl, publishProviderSnapshot, resolvePublicOrigin, verifyGitHubUser, DEFAULT_GITHUB_OAUTH_CLIENT_ID } from "@ai-usage-profile/shared";
 import { CodexProvider, resolveCodexBinary } from "../codex.js";
 import { installSchedule, uninstallSchedule, resolveStateDir, schedulePaths, readJson, writeJson } from "./schedule.js";
 

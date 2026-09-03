@@ -1,5 +1,5 @@
 import { CodexProvider } from "../src/codex.js";
-import { PROVIDER_CATALOG } from "@ai-usage/shared";
+import { PROVIDER_CATALOG } from "@ai-usage-profile/shared";
 
 function mockClientFactory(sequence) {
   let index = 0;

@@ -1,6 +1,6 @@
 {
-  "name": "@ai-usage/server",
-  "version": "0.6.0",
+  "name": "@ai-usage-profile/server",
+  "version": "0.6.1",
   "private": true,
   "type": "module",
   "bin": {
@@ -10,7 +10,7 @@
     ".": "./src/index.js"
   },
   "dependencies": {
-    "@ai-usage/shared": "workspace:*",
+    "@ai-usage-profile/shared": "workspace:*",
     "@aws-sdk/client-s3": "3.888.0",
     "@fastify/helmet": "13.1.1",
     "@fastify/rate-limit": "11.2.0",

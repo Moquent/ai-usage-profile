@@ -1,5 +1,5 @@
-import { createHostedService } from "@ai-usage/server";
-import { verifyGitHubUser } from "@ai-usage/shared";
+import { createHostedService } from "@ai-usage-profile/server";
+import { verifyGitHubUser } from "@ai-usage-profile/shared";
 import { ADMIN_KEY, loadUsageSnapshot } from "../../test-support/helpers.js";
 
 describe("GitHub publishing", () => {

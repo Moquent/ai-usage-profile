@@ -1,6 +1,6 @@
 {
-  "name": "@ai-usage/shared",
-  "version": "0.6.0",
+  "name": "@ai-usage-profile/shared",
+  "version": "0.6.1",
   "type": "module",
   "description": "Shared schemas and API helpers for AI Usage Profile.",
   "license": "MIT",

@@ -1,4 +1,4 @@
-import { CARD, PALETTES, STAT_CATALOG, cardOptionsSchema, escapeXml, parseUsageSnapshot } from "@ai-usage/shared";
+import { CARD, PALETTES, STAT_CATALOG, cardOptionsSchema, escapeXml, parseUsageSnapshot } from "@ai-usage-profile/shared";
 
 export function formatCompact(value) {
   if (value === null || value === undefined) return "—";

@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import readline from "node:readline";
 import { setTimeout as delay } from "node:timers/promises";
 import { JSONRPCClient } from "json-rpc-2.0";
-import { PROVIDER_CATALOG, parseUsageSnapshot } from "@ai-usage/shared";
+import { PROVIDER_CATALOG, parseUsageSnapshot } from "@ai-usage-profile/shared";
 import packageJson from "../package.json" with { type: "json" };
 
 const DEFAULT_TIMEOUT_MS = 30_000;

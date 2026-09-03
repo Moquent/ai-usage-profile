@@ -8,7 +8,7 @@ import {
   LAYOUTS,
   listProviders,
   presentationCardFromCli,
-} from "@ai-usage/shared";
+} from "@ai-usage-profile/shared";
 import { loadServiceConfig, startHostedService } from "./service/hosted-service.js";
 
 function identity(value) {

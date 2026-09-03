@@ -149,14 +149,17 @@ Login once, then publish both packages (shared first, then CLI):
 
 ```bash
 npm login
-pnpm publish:npm
+corepack pnpm install
+corepack pnpm publish:npm
 ```
 
-Or manually:
+Or publish each package manually:
 
 ```bash
-pnpm --filter @ai-usage/shared publish --access public
-pnpm --filter ai-usage-profile publish --access public
+corepack pnpm --filter @ai-usage-profile/shared publish --access public
+corepack pnpm --filter ai-usage-profile publish --access public
 ```
+
+Do **not** run `npm publish` from the monorepo root (it is `private`).
 
 MIT licensed.

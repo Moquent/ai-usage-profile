@@ -1,5 +1,5 @@
 import { fileURLToPath } from "node:url";
-import { getProviderMetadata } from "@ai-usage/shared";
+import { getProviderMetadata } from "@ai-usage-profile/shared";
 import { CodexProvider, CodexAppServerClient } from "../src/codex.js";
 
 const fixture = fileURLToPath(new URL("../test-support/fake-app-server.js", import.meta.url));

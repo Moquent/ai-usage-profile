@@ -1,11 +1,11 @@
 import { Command, InvalidArgumentError } from "commander";
 import os from "node:os";
 import packageJson from "../package.json" with { type: "json" };
-import { resolvePublicOrigin } from "@ai-usage/shared";
+import { resolvePublicOrigin } from "@ai-usage-profile/shared";
 import { CodexProvider } from "./codex.js";
 import { resolveGitHubToken, setupLocalSchedule } from "./local/setup.js";
 import { resolveStateDir } from "./local/schedule.js";
-import { publishProviderSnapshot } from "@ai-usage/shared";
+import { publishProviderSnapshot } from "@ai-usage-profile/shared";
 
 function positiveNumber(value) {
   const number = Number(value);

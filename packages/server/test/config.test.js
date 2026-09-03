@@ -5,7 +5,7 @@ import {
   presentationCardFromCli,
   presentationConfigSchema,
   presentationOverridesFromCli,
-} from "@ai-usage/shared";
+} from "@ai-usage-profile/shared";
 
 describe("presentation configuration", () => {
   it("merges CLI overrides into the stored card config", () => {

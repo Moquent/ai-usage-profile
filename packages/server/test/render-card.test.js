@@ -1,4 +1,4 @@
-import { LAYOUTS, STAT_CATALOG, parseUsageSnapshot } from "@ai-usage/shared";
+import { LAYOUTS, STAT_CATALOG, parseUsageSnapshot } from "@ai-usage-profile/shared";
 import { formatCompact, formatDuration, renderCard } from "../src/render/card.js";
 import { loadUsageSnapshot } from "../../test-support/helpers.js";
 

@@ -23,7 +23,7 @@ importers:
 
   packages/client:
     dependencies:
-      '@ai-usage/shared':
+      '@ai-usage-profile/shared':
         specifier: workspace:*
         version: link:../shared
       '@octokit/auth-oauth-device':
@@ -39,13 +39,13 @@ importers:
         specifier: 1.8.0
         version: 1.8.0
     devDependencies:
-      '@ai-usage/server':
+      '@ai-usage-profile/server':
         specifier: workspace:*
         version: link:../server
 
   packages/server:
     dependencies:
-      '@ai-usage/shared':
+      '@ai-usage-profile/shared':
         specifier: workspace:*
         version: link:../shared
       '@aws-sdk/client-s3':

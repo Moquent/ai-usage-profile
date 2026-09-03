@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync } from "node:fs";
 import pg from "pg";
-import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage/shared";
+import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage-profile/shared";
 
 const migrationsUrl = new URL("../../migrations/postgres/", import.meta.url);
 

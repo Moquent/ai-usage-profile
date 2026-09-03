@@ -2,7 +2,7 @@ import { createHash, randomBytes, randomUUID, timingSafeEqual } from "node:crypt
 import { mkdirSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { DatabaseSync } from "node:sqlite";
-import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage/shared";
+import { presentationConfigSchema, publishEnvelopeSchema } from "@ai-usage-profile/shared";
 
 const TOKEN_PREFIX = "aup_v1";
 

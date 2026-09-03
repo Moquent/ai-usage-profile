@@ -27,7 +27,7 @@ import {
   publishResponseSchema,
   toCardOptions,
   updateProfileBodySchema,
-} from "@ai-usage/shared";
+} from "@ai-usage-profile/shared";
 import { renderCard } from "../render/card.js";
 import { createProfileStore } from "./create-profile-store.js";
 import {

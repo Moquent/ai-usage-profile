@@ -1,6 +1,6 @@
 {
   "name": "ai-usage-profile",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "type": "module",
   "description": "Publish account-wide AI usage to a hosted GitHub profile card.",
   "homepage": "https://github.com/Moquent/ai-usage-profile#readme",
@@ -43,13 +43,13 @@
     "usage"
   ],
   "dependencies": {
-    "@ai-usage/shared": "workspace:*",
+    "@ai-usage-profile/shared": "workspace:*",
     "@octokit/auth-oauth-device": "8.0.5",
     "commander": "15.0.0",
     "execa": "9.6.0",
     "json-rpc-2.0": "1.8.0"
   },
   "devDependencies": {
-    "@ai-usage/server": "workspace:*"
+    "@ai-usage-profile/server": "workspace:*"
   }
 }

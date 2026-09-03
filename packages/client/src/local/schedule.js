@@ -1,7 +1,7 @@
 import { mkdir, readFile, unlink, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { escapeXml } from "@ai-usage/shared";
+import { escapeXml } from "@ai-usage-profile/shared";
 
 export const SCHEDULE_LABEL = "com.ai-usage-profile.sync";
 export const WINDOWS_TASK_NAME = "AI Usage Profile Sync";
