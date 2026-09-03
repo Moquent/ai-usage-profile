@@ -27,7 +27,7 @@
     "README.md"
   ],
   "scripts": {
-    "prepack": "NODE_OPTIONS=--experimental-vm-modules pnpm -C ../../ exec jest --config jest.config.cjs --testPathPattern=packages/client/test --runInBand"
+    "prepack": "NODE_OPTIONS=--experimental-vm-modules node ../../node_modules/jest/bin/jest.js --config ../../jest.config.cjs --testPathPattern=packages/client/test --runInBand"
   },
   "engines": {
     "node": ">=22.13"
