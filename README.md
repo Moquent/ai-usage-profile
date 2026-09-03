@@ -163,4 +163,10 @@ corepack pnpm --filter ai-usage-profile publish --access public
 
 Do **not** run `npm publish` from the monorepo root (it is `private`).
 
+## Legal
+
+- **Software license:** [MIT](LICENSE) (open-source code)
+- **Hosted service:** [Terms of Service](legal/TERMS.md) · [Privacy Policy](legal/PRIVACY.md)
+- Live: `https://aiusage.teje.sh/terms` and `https://aiusage.teje.sh/privacy`
+
 MIT licensed.
