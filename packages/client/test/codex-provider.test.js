@@ -1,6 +1,10 @@
 import { fileURLToPath } from "node:url";
+import { chmod, mkdir, mkdtemp, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
 import { getProviderMetadata } from "@ai-usage-profile/shared";
-import { CodexProvider, CodexAppServerClient } from "../src/codex.js";
+import { CodexProvider, CodexAppServerClient, resolveCodexBinary } from "../src/codex.js";
+import { userPathEnvironment } from "../src/local/schedule.js";
 
 const fixture = fileURLToPath(new URL("../test-support/fake-app-server.js", import.meta.url));
 
@@ -41,5 +45,22 @@ describe("Codex provider", () => {
   it("rejects requests before the app-server starts", async () => {
     const client = new CodexAppServerClient({ binary: process.execPath, args: [fixture] });
     await expect(client.request("initialize")).rejects.toThrow(/not running/);
+  });
+
+  it("honors CODEX_BIN and resolves codex from augmented PATH", async () => {
+    await expect(resolveCodexBinary({ CODEX_BIN: "/custom/codex" })).resolves.toBe("/custom/codex");
+
+    const home = await mkdtemp(path.join(os.tmpdir(), "ai-usage-codex-"));
+    const codexPath = path.join(home, ".local", "bin", "codex");
+    await mkdir(path.dirname(codexPath), { recursive: true });
+    await writeFile(codexPath, "", "utf8");
+    await chmod(codexPath, 0o755);
+    await expect(resolveCodexBinary({
+      HOME: home,
+      PATH: userPathEnvironment(home, process.platform, ""),
+    })).resolves.toBe(codexPath);
+
+    const emptyHome = await mkdtemp(path.join(os.tmpdir(), "ai-usage-codex-empty-"));
+    await expect(resolveCodexBinary({ HOME: emptyHome, PATH: "" })).resolves.toBe("codex");
   });
 });
