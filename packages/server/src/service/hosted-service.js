@@ -30,6 +30,7 @@ import {
   updateProfileBodySchema,
 } from "@ai-usage-profile/shared";
 import { renderCard } from "../render/card.js";
+import { renderLegalPage } from "../legal/pages.js";
 import { createProfileStore } from "./create-profile-store.js";
 import {
   createProfileId,
@@ -277,6 +278,28 @@ export async function createHostedService({
   app.get("/healthz", {
     schema: { hide: true },
   }, async () => ({ status: "ok" }));
+
+  app.get("/privacy", {
+    schema: { hide: true },
+  }, async (_request, reply) => {
+    const html = await renderLegalPage("privacy");
+    if (!html) return reply.code(404).type("text/plain").send("Not found\n");
+    return reply
+      .type("text/html; charset=utf-8")
+      .header("Cache-Control", "public, max-age=3600")
+      .send(html);
+  });
+
+  app.get("/terms", {
+    schema: { hide: true },
+  }, async (_request, reply) => {
+    const html = await renderLegalPage("terms");
+    if (!html) return reply.code(404).type("text/plain").send("Not found\n");
+    return reply
+      .type("text/html; charset=utf-8")
+      .header("Cache-Control", "public, max-age=3600")
+      .send(html);
+  });
 
   app.get("/readyz", {
     schema: { hide: true },
