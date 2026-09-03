@@ -239,8 +239,13 @@ describe("hosted service", () => {
   it("serves legal pages", async () => {
     const app = await createHostedService({ adminKey: ADMIN_KEY, logger: false });
     try {
+      const home = await app.inject({ method: "GET", url: "/" });
       const privacy = await app.inject({ method: "GET", url: "/privacy" });
       const terms = await app.inject({ method: "GET", url: "/terms" });
+      expect(home.statusCode).toBe(200);
+      expect(home.headers["content-type"]).toMatch(/text\/html/);
+      expect(home.body).toMatch(/AI Usage Profile|npx ai-usage-profile setup/);
+      expect(privacy.statusCode).toBe(200);
       expect(privacy.statusCode).toBe(200);
       expect(privacy.headers["content-type"]).toMatch(/text\/html/);
       expect(privacy.body).toMatch(/Privacy Policy|do not store/i);

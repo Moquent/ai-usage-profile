@@ -167,6 +167,6 @@ Do **not** run `npm publish` from the monorepo root (it is `private`).
 
 - **Software license:** [MIT](LICENSE) (open-source code)
 - **Hosted service:** [Terms of Service](legal/TERMS.md) · [Privacy Policy](legal/PRIVACY.md)
-- Live: `https://aiusage.teje.sh/terms` and `https://aiusage.teje.sh/privacy`
+- Live: `https://aiusage.teje.sh/` · [Terms](legal/TERMS.md) · [Privacy](legal/PRIVACY.md)
 
 MIT licensed.

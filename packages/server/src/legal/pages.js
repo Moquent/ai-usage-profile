@@ -84,7 +84,7 @@ function wrapPage(title, bodyHtml) {
 <body>
 ${bodyHtml}
 <footer>
-  <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> ·
+  <a href="/">Home</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> ·
   <a href="https://github.com/Moquent/ai-usage-profile">Source (MIT)</a>
 </footer>
 </body>

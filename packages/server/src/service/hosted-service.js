@@ -31,6 +31,7 @@ import {
 } from "@ai-usage-profile/shared";
 import { renderCard } from "../render/card.js";
 import { renderLegalPage } from "../legal/pages.js";
+import { renderHomePage } from "../site/home.js";
 import { createProfileStore } from "./create-profile-store.js";
 import {
   createProfileId,
@@ -274,6 +275,16 @@ export async function createHostedService({
       cardUrl: cardUrl(request, profile, publicBaseUrl),
     };
   }
+
+  app.get("/", {
+    schema: { hide: true },
+  }, async (request, reply) => {
+    const origin = requestOrigin(request, publicBaseUrl);
+    return reply
+      .type("text/html; charset=utf-8")
+      .header("Cache-Control", "public, max-age=3600")
+      .send(renderHomePage(origin));
+  });
 
   app.get("/healthz", {
     schema: { hide: true },
