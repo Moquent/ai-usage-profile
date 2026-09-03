@@ -110,7 +110,7 @@ Examples:
 # Six stats, light mode
 .../card.svg?theme=light&layout=stats&stats=lifetime,peak,longest-chat,current-streak,longest-streak,active-days
 
-# Profile card (default from setup)
+# Profile card (default from setup; in HTML use &amp; and %2C like the snippet above)
 .../card.svg?theme=dark&layout=profile&identity=show&stats=lifetime,peak,longest-chat,current-streak,longest-streak,active-days
 ```
 
@@ -120,7 +120,7 @@ Examples:
 | `stats` | Up to 6 stat tiles |
 | `profile` | Name + stats + activity graph |
 
-Stats include lifetime usage, peak day, streaks, longest chat, active days, and more. Missing data shows an em dash — no fake numbers.
+Stats include lifetime tokens, peak day, streaks, longest session, active days, and more. Missing data shows an em dash — no fake numbers.
 
 ## Your data stays yours
 
