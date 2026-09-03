@@ -85,12 +85,11 @@ Display-only query parameters:
 | --- | --- |
 | `graph` | Contribution-style daily token grid |
 | `stats` | One to six selected statistics |
-| `profile` | Optional identity, statistics, and graph |
-| `full` | Profile layout plus provider provenance |
+| `profile` | Identity, statistics, and activity graph (default from `setup`) |
 
 Available statistics: `lifetime`, `peak`, `longest-chat`, `current-streak`,
 `longest-streak`, `active-days`, `reported-days`. Missing metrics render as an
-em dash.
+em dash. Use `&amp;` and `%2C` in README HTML so GitHub does not truncate query params.
 
 ## Refresh
 

@@ -67,18 +67,18 @@ describe("hosted service", () => {
 
       const card = await app.inject({
         method: "GET",
-        url: "/u/moquent/card.svg?theme=dark&layout=full",
+        url: "/u/moquent/card.svg?theme=dark&layout=profile",
       });
       expect(card.statusCode).toBe(200);
       expect(card.headers["content-type"]).toMatch(/^image\/svg\+xml/);
       expect(card.headers["x-ai-usage-snapshot"]).toBe("fresh");
-      expect(card.body).toMatch(/OpenAI Codex App Server/);
-      expect(card.body).not.toMatch(/Spoofed|Untrusted/);
+      expect(card.body).toMatch(/Lifetime tokens|Codex activity/);
+      expect(card.body).not.toMatch(/Spoofed|Untrusted|OpenAI Codex App Server/);
       const etag = card.headers.etag;
 
       const cached = await app.inject({
         method: "GET",
-        url: "/u/moquent/card.svg?theme=dark&layout=full",
+        url: "/u/moquent/card.svg?theme=dark&layout=profile",
         headers: { "if-none-match": etag },
       });
       expect(cached.statusCode).toBe(304);

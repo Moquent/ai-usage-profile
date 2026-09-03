@@ -3,7 +3,7 @@ import os from "node:os";
 import { fileURLToPath } from "node:url";
 import { createOAuthDeviceAuth } from "@octokit/auth-oauth-device";
 import { execa } from "execa";
-import { publicCardUrl, publishProviderSnapshot, resolvePublicOrigin, verifyGitHubUser, DEFAULT_GITHUB_OAUTH_CLIENT_ID } from "@ai-usage-profile/shared";
+import { readmeCardSnippet, publishProviderSnapshot, resolvePublicOrigin, verifyGitHubUser, DEFAULT_GITHUB_OAUTH_CLIENT_ID } from "@ai-usage-profile/shared";
 import { CodexProvider, resolveCodexBinary } from "../codex.js";
 import { installSchedule, uninstallSchedule, resolveStateDir, schedulePaths, readJson, writeJson } from "./schedule.js";
 
@@ -151,18 +151,13 @@ export async function setupLocalSchedule({
     installedAt: now().toISOString(),
   });
 
-  const cardUrl = publicCardUrl(endpoint, github.username);
   return {
     username: github.username,
     endpoint,
     cardUrl: published.cardUrl,
     published,
     schedule: installed,
-    snippet: `<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="${cardUrl}?theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="${cardUrl}?theme=light">
-  <img width="100%" src="${cardUrl}?theme=dark" alt="Account-wide AI usage">
-</picture>`,
+    snippet: readmeCardSnippet(endpoint, github.username),
   };
 }
 

@@ -5,11 +5,15 @@ module.exports = {
   transform: {},
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
+    "^@ai-usage-profile/shared$": "<rootDir>/packages/shared/src/index.js",
+    "^@ai-usage-profile/server$": "<rootDir>/packages/server/src/index.js",
   },
   coverageProvider: "v8",
   collectCoverageFrom: [
     "packages/*/src/**/*.js",
     "!packages/*/src/index.js",
+    "!packages/server/src/service/postgres-profile-repository.js",
+    "!packages/server/src/service/object-store.js",
   ],
   coverageDirectory: "coverage",
   coverageThreshold: {

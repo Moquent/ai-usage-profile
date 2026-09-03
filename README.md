@@ -58,14 +58,16 @@ Copy the **Client ID** into `AI_USAGE_GITHUB_CLIENT_ID`. No client secret needed
 
 ## Paste into your README
 
+Run `setup` — it prints a GitHub-safe `<picture>` snippet with encoded query params. Or paste this (replace `your-login`):
+
 ```html
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark">
+          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days">
   <source media="(prefers-color-scheme: light)"
-          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=light">
+          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=light&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days">
   <img width="100%"
-       src="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark"
+       src="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days"
        alt="Account-wide AI usage">
 </picture>
 ```
@@ -94,7 +96,7 @@ Tweak the image URL with query params (no files in git):
 
 ```text
 ?theme=dark|light
-?layout=graph|stats|profile|full
+?layout=graph|stats|profile
 ?stats=lifetime,peak,current-streak,longest-streak,active-days,...
 ?identity=show|hide
 ```
@@ -108,16 +110,15 @@ Examples:
 # Six stats, light mode
 .../card.svg?theme=light&layout=stats&stats=lifetime,peak,longest-chat,current-streak,longest-streak,active-days
 
-# Everything
-.../card.svg?theme=dark&layout=full
+# Profile card (default from setup)
+.../card.svg?theme=dark&layout=profile&identity=show&stats=lifetime,peak,longest-chat,current-streak,longest-streak,active-days
 ```
 
 | Layout | What you get |
 | --- | --- |
 | `graph` | Daily token heatmap |
 | `stats` | Up to 6 stat tiles |
-| `profile` | Name + stats + graph |
-| `full` | Profile + provider line |
+| `profile` | Name + stats + activity graph |
 
 Stats include lifetime usage, peak day, streaks, longest chat, active days, and more. Missing data shows an em dash — no fake numbers.
 

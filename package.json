@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "examples": "node scripts/generate-examples.mjs",
     "publish:npm": "corepack pnpm --filter @ai-usage-profile/shared publish --access public --no-git-checks && corepack pnpm --filter ai-usage-profile publish --access public --no-git-checks"
   },
   "engines": {

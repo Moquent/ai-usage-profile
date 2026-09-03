@@ -31,7 +31,7 @@ describe("publisher client", () => {
       expect(result.revision).toBe(1);
       const card = await fetch(result.cardUrl);
       expect(card.status).toBe(200);
-      expect(await card.text()).toMatch(/Codex token activity/);
+      expect(await card.text()).toMatch(/Codex activity/);
     } finally {
       await app.close();
     }
