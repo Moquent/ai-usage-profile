@@ -246,7 +246,6 @@ describe("hosted service", () => {
       expect(home.headers["content-type"]).toMatch(/text\/html/);
       expect(home.body).toMatch(/AI Usage Profile|npx ai-usage-profile setup/);
       expect(privacy.statusCode).toBe(200);
-      expect(privacy.statusCode).toBe(200);
       expect(privacy.headers["content-type"]).toMatch(/text\/html/);
       expect(privacy.body).toMatch(/Privacy Policy|do not store/i);
       expect(terms.statusCode).toBe(200);
