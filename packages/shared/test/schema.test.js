@@ -12,6 +12,7 @@ import {
   parseStatsParam,
   presentationCard,
   publishedCardPresentation,
+  parseStoredPresentation,
   publicCardUrl,
   readmeCardSnippet,
   resolvePublicOrigin,
@@ -35,6 +36,7 @@ describe("shared schema helpers", () => {
     expect(resolvePublicOrigin(undefined, { AI_USAGE_ENDPOINT: "https://env.example" }))
       .toBe("https://env.example");
     expect(resolvePublicOrigin("https://explicit.example")).toBe("https://explicit.example");
+    expect(resolvePublicOrigin(undefined, {})).toBe("https://aiusage.teje.sh");
     expect(publicCardUrl("https://usage.example.com", "Moquent"))
       .toBe("https://usage.example.com/u/moquent/card.svg");
   });
@@ -68,6 +70,17 @@ describe("shared schema helpers", () => {
     expect(published.stats).toEqual([...DEFAULT_PROFILE_STATS]);
     expect(published.labels).toEqual({ peak: "Best day" });
     expect(presentationCard("Moquent", { layout: "full" }).layout).toBe("profile");
+  });
+
+  it("parses stored cards with legacy full layout", () => {
+    const card = parseStoredPresentation({
+      username: "Moquent",
+      layout: "full",
+      stats: ["lifetime"],
+      labels: {},
+      identity: true,
+    });
+    expect(card.layout).toBe("profile");
   });
 
   it("parses stats and labels from CLI strings", () => {

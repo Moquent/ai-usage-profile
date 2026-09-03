@@ -2,6 +2,13 @@ import { mkdtemp, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { ProfileRepository } from "../src/service/profile-repository.js";
+import {
+  GITHUB_BOUND_TOKEN_HASH,
+  credentialHashEquals,
+  credentialsEqual,
+  hashCredential,
+  isGitHubBoundProfile,
+} from "../src/service/profile-repository.js";
 import { loadUsageSnapshot } from "../../test-support/helpers.js";
 
 const card = {
@@ -60,6 +67,34 @@ describe("profile repository", () => {
       });
       expect(changed.revision).toBe(2);
       expect(repository.health().profiles).toBe(1);
+    } finally {
+      repository.close();
+    }
+  });
+
+  it("tracks GitHub-bound profiles by publish token hash", () => {
+    const repository = new ProfileRepository();
+    try {
+      const githubBound = repository.createProfile({
+        id: "b2168b83-27d6-46cf-a543-7086aa49fd53",
+        slug: "moquent",
+        providerId: "codex",
+        card,
+        publishTokenHash: GITHUB_BOUND_TOKEN_HASH,
+        githubUserId: 42,
+      });
+      expect(isGitHubBoundProfile(githubBound)).toBe(true);
+      expect(credentialHashEquals(GITHUB_BOUND_TOKEN_HASH, hashCredential("github-bound"))).toBe(true);
+      expect(credentialsEqual("github-bound", GITHUB_BOUND_TOKEN_HASH)).toBe(true);
+
+      const tokenBound = repository.createProfile({
+        id: "c3168b83-27d6-46cf-a543-7086aa49fd54",
+        slug: "other",
+        providerId: "codex",
+        card,
+        publishTokenHash: hashCredential("publisher-token"),
+      });
+      expect(isGitHubBoundProfile(tokenBound)).toBe(false);
     } finally {
       repository.close();
     }

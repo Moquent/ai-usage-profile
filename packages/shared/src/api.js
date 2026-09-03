@@ -1,4 +1,5 @@
 import { FetchError, ofetch } from "ofetch";
+import { createHash } from "node:crypto";
 import { z } from "zod";
 import { parseUsageSnapshot, publishResponseSchema } from "./schema.js";
 
@@ -144,13 +145,26 @@ export async function verifyGitHubUser(token, { fetch: fetchImpl, timeoutMs = 10
   }
 }
 
-export function createGitHubUserLookup({ fetch: fetchImpl, now = Date.now, ttlMs = 30_000 } = {}) {
+export function createGitHubUserLookup({
+  fetch: fetchImpl,
+  now = Date.now,
+  ttlMs = 30_000,
+  maxEntries = 256,
+} = {}) {
   const cache = new Map();
   return async function lookupGitHubUser(token) {
-    const cached = cache.get(token);
+    const cacheKey = createHash("sha256").update(token, "utf8").digest("base64url");
+    const cached = cache.get(cacheKey);
     if (cached && cached.expiresAt > now()) return cached.user;
+    if (cached) cache.delete(cacheKey);
     const user = await verifyGitHubUser(token, { fetch: fetchImpl });
-    if (user) cache.set(token, { user, expiresAt: now() + ttlMs });
+    if (user) {
+      if (cache.size >= maxEntries) {
+        const oldestKey = cache.keys().next().value;
+        if (oldestKey !== undefined) cache.delete(oldestKey);
+      }
+      cache.set(cacheKey, { user, expiresAt: now() + ttlMs });
+    }
     return user;
   };
 }

@@ -39,15 +39,17 @@ npx ai-usage-profile publish
 
 From source: `node packages/client/bin/ai-usage-profile.js publish`
 
+Set the hosted API origin with `AI_USAGE_ENDPOINT` or pass `--endpoint` to CLI commands.
+
 Default origin: `https://aiusage.teje.sh` (override with `AI_USAGE_ENDPOINT`).
 
 ### GitHub OAuth App (optional)
 
-The CLI ships with a built-in OAuth App client id for device login. To use your own app instead:
+`npx ai-usage-profile setup` uses a built-in OAuth App client id for the default hosted origin. Set `AI_USAGE_GITHUB_CLIENT_ID` to use your own app instead:
 
 GitHub → **Settings → Developer settings → OAuth Apps → New OAuth App**
 
-- Homepage: `https://aiusage.teje.sh` (or yours)
+- Homepage: your hosted service URL (or any URL you control)
 - Callback: `https://github.com/login/oauth/callback`
 - **Enable Device Flow:** on
 - **Expire user access tokens:** off (scheduled publish uses a long-lived token)
@@ -167,6 +169,6 @@ Do **not** run `npm publish` from the monorepo root (it is `private`).
 
 - **Software license:** [MIT](LICENSE) (open-source code)
 - **Hosted service:** [Terms of Service](legal/TERMS.md) · [Privacy Policy](legal/PRIVACY.md)
-- Live: `https://aiusage.teje.sh/terms` · [Privacy](https://aiusage.teje.sh/privacy)
+- Live on your hosted origin: `/terms` · `/privacy`
 
 MIT licensed.

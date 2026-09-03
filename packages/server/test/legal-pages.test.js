@@ -5,6 +5,7 @@ describe("legal pages", () => {
     const privacy = await renderLegalPage("privacy");
     const terms = await renderLegalPage("terms");
     expect(privacy).toMatch(/<title>Privacy Policy/);
+    expect(privacy).toMatch(/<strong>/);
     expect(privacy).toMatch(/do not store/i);
     expect(terms).toMatch(/<title>Terms of Service/);
     expect(terms).toMatch(/Limitation of liability/i);

@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { escapeHtml } from "../html/escape.js";
+import { formatInlineMarkdown } from "../html/inline-markdown.js";
 
 const LEGAL_DIR = fileURLToPath(new URL("../../../../legal/", import.meta.url));
 
@@ -8,14 +10,6 @@ const PAGES = Object.freeze({
   privacy: { file: "PRIVACY.md", title: "Privacy Policy" },
   terms: { file: "TERMS.md", title: "Terms of Service" },
 });
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
 
 function markdownToHtml(markdown) {
   const lines = markdown.split("\n");
@@ -45,7 +39,7 @@ function markdownToHtml(markdown) {
         chunks.push("<ul>");
         listOpen = true;
       }
-      chunks.push(`<li>${inlineMarkdown(escapeHtml(line.slice(2)))}</li>`);
+      chunks.push(`<li>${formatInlineMarkdown(line.slice(2))}</li>`);
       continue;
     }
     if (line.trim() === "") {
@@ -53,18 +47,10 @@ function markdownToHtml(markdown) {
       continue;
     }
     closeList();
-    chunks.push(`<p>${inlineMarkdown(escapeHtml(line))}</p>`);
+    chunks.push(`<p>${formatInlineMarkdown(line)}</p>`);
   }
   closeList();
   return chunks.join("\n");
-}
-
-function inlineMarkdown(text) {
-  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    const safePath = href.startsWith("/") && !href.startsWith("//");
-    if (!/^https?:\/\//i.test(href) && !safePath) return label;
-    return `<a href="${escapeHtml(href)}">${label}</a>`;
-  });
 }
 
 function wrapPage(title, bodyHtml) {
@@ -88,8 +74,7 @@ function wrapPage(title, bodyHtml) {
 <body>
 ${bodyHtml}
 <footer>
-  <a href="/">Home</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> ·
-  <a href="https://github.com/Moquent/ai-usage-profile">Source (MIT)</a>
+  <a href="/">Home</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a>
 </footer>
 </body>
 </html>`;

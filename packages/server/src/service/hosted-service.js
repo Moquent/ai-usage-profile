@@ -31,6 +31,7 @@ import {
 } from "@ai-usage-profile/shared";
 import { renderCard } from "../render/card.js";
 import { renderLegalPage } from "../legal/pages.js";
+import { renderHomePage } from "../site/home.js";
 import { createProfileStore } from "./create-profile-store.js";
 import {
   createProfileId,
@@ -38,12 +39,14 @@ import {
   credentialsEqual,
   GITHUB_BOUND_TOKEN_HASH,
   hashCredential,
+  isGitHubBoundProfile,
 } from "./profile-repository.js";
 import { createCardStore, loadObjectStoreConfig } from "./object-store.js";
 
 const MAX_CLOCK_SKEW_MS = 10 * 60 * 1_000;
 const PUBLISH_LIMIT = { rateLimit: { max: 30, timeWindow: "1 minute" } };
 const READ_LIMIT = { rateLimit: { max: 60, timeWindow: "1 minute" } };
+const CARD_READ_LIMIT = { rateLimit: { max: 120, timeWindow: "1 minute" } };
 const GITHUB_SNAPSHOT_LIMIT = {
   rateLimit: {
     max: 6,
@@ -207,7 +210,17 @@ export async function createHostedService({
 
   async function requirePublisher(request, reply) {
     const profile = await store.getProfileById(request.params.id);
-    if (!profile || !credentialsEqual(
+    if (!profile) {
+      return reply.code(401).send(errorPayload(request, "unauthorized", "A valid publishing token is required"));
+    }
+    if (isGitHubBoundProfile(profile)) {
+      return reply.code(401).send(errorPayload(
+        request,
+        "unauthorized",
+        "This profile publishes via GitHub authentication only",
+      ));
+    }
+    if (!credentialsEqual(
       bearerToken(request.headers.authorization),
       profile.publishTokenHash,
     )) {
@@ -274,6 +287,15 @@ export async function createHostedService({
       cardUrl: cardUrl(request, profile, publicBaseUrl),
     };
   }
+
+  app.get("/", {
+    schema: { hide: true },
+  }, async (_request, reply) => {
+    return reply
+      .type("text/html; charset=utf-8")
+      .header("Cache-Control", "public, max-age=3600")
+      .send(renderHomePage());
+  });
 
   app.get("/healthz", {
     schema: { hide: true },
@@ -401,9 +423,21 @@ export async function createHostedService({
         200: createProfileResponseSchema.pick({ publishToken: true }),
         401: errorResponseSchema,
         404: errorResponseSchema,
+        409: errorResponseSchema,
       },
     },
   }, async (request, reply) => {
+    const existing = await store.getProfileById(request.params.id);
+    if (!existing) {
+      return reply.code(404).send(errorPayload(request, "not_found", "Profile not found"));
+    }
+    if (isGitHubBoundProfile(existing)) {
+      return reply.code(409).send(errorPayload(
+        request,
+        "github_bound_profile",
+        "GitHub-bound profiles publish via GitHub authentication only",
+      ));
+    }
     const publishToken = createPublishToken(request.params.id);
     const profile = await store.updatePublishToken(request.params.id, hashCredential(publishToken));
     if (!profile) return reply.code(404).send(errorPayload(request, "not_found", "Profile not found"));
@@ -413,8 +447,28 @@ export async function createHostedService({
   app.delete("/v1/profiles/:id", {
     onRequest: requireAdmin,
     config: PUBLISH_LIMIT,
-    schema: { tags: ["admin"], params: profileIdParamsSchema },
+    schema: {
+      tags: ["admin"],
+      params: profileIdParamsSchema,
+      response: { 204: z.undefined(), 401: errorResponseSchema, 404: errorResponseSchema, 503: errorResponseSchema },
+    },
   }, async (request, reply) => {
+    const profile = await store.getProfileById(request.params.id);
+    if (!profile) {
+      return reply.code(404).send(errorPayload(request, "not_found", "Profile not found"));
+    }
+    if (cardStore) {
+      try {
+        await cardStore.deleteCards(profile.slug);
+      } catch (error) {
+        request.log.error({ err: error, slug: profile.slug }, "card delete failed");
+        return reply.code(503).send(errorPayload(
+          request,
+          "card_delete_failed",
+          "Unable to delete rendered cards from object storage",
+        ));
+      }
+    }
     if (!(await store.deleteProfile(request.params.id))) {
       return reply.code(404).send(errorPayload(request, "not_found", "Profile not found"));
     }
@@ -507,6 +561,7 @@ export async function createHostedService({
   });
 
   app.get("/u/:slug/card.svg", {
+    config: CARD_READ_LIMIT,
     schema: { tags: ["public"], params: profileSlugParamsSchema },
   }, async (request, reply) => {
     const profile = await store.getProfileBySlug(request.params.slug);

@@ -30,6 +30,26 @@ describe("shared API helpers", () => {
     expect(await verifyGitHubUser("short")).toBeNull();
   });
 
+  it("evicts oldest cache entries when the lookup cache is full", async () => {
+    let calls = 0;
+    const fetchImpl = async () => {
+      calls += 1;
+      return Response.json({ id: calls, login: `User${calls}` });
+    };
+    const lookup = createGitHubUserLookup({
+      fetch: fetchImpl,
+      ttlMs: 60_000,
+      now: () => 1_000,
+      maxEntries: 2,
+    });
+    await lookup("token-aaaa");
+    await lookup("token-bbbb");
+    await lookup("token-cccc");
+    expect(calls).toBe(3);
+    await lookup("token-aaaa");
+    expect(calls).toBe(4);
+  });
+
   it("maps GitHub API failures to null or descriptive errors", async () => {
     expect(await verifyGitHubUser("gho_bad", {
       fetch: async () => new Response("nope", { status: 401 }),

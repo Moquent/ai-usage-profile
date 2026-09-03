@@ -1,4 +1,4 @@
-import { HeadBucketCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { DeleteObjectCommand, HeadBucketCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { z } from "zod";
 
 const objectStoreConfigSchema = z.object({
@@ -46,6 +46,15 @@ export class MinioCardStore {
       },
     }));
     return etag;
+  }
+
+  async deleteCards(slug) {
+    for (const filename of ["dark.svg", "light.svg", "card.svg"]) {
+      await this.client.send(new DeleteObjectCommand({
+        Bucket: this.bucket,
+        Key: `${slug}/${filename}`,
+      }));
+    }
   }
 
   async health() {
