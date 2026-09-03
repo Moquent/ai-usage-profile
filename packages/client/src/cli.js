@@ -46,7 +46,7 @@ export function createProgram() {
         return;
       }
       process.stdout.write(
-        `Installed local ${result.schedule.kind} schedule for ${result.username}\nPublished ${result.published.status} snapshot (revision ${result.published.revision})\n${result.cardUrl}\n\nREADME snippet:\n${result.snippet}\n`,
+        `Installed local ${result.schedule.kind} schedule for ${result.username}\nPublished ${result.published.status} snapshot (revision ${result.published.revision})\n${result.cardUrl}\n\nPreview (browser): ${result.previewUrl}\n\nREADME snippet (paste in profile README — do not open &amp; URLs in the browser):\n${result.snippet}\n`,
       );
     });
 
