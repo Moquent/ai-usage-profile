@@ -1,423 +1,428 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="338" viewBox="0 0 760 338" role="img" aria-labelledby="title desc">
-  <title id="title">Moquent account-wide Codex activity</title>
-  <desc id="desc">Compact Codex profile, selected statistics, and daily token activity.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="340" viewBox="0 0 760 340" role="img" aria-labelledby="title desc">
+  <title id="title">Moquent Codex usage</title>
+  <desc id="desc">Codex usage statistics and daily token activity.</desc>
   <style>
     text { font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace; }
-    .name { fill: #F0F6FC; font-size: 17px; font-weight: 650; letter-spacing: .5px; }
+    .name { fill: #F0F6FC; font-size: 17px; font-weight: 650; letter-spacing: .3px; }
     .identity { fill: #8B949E; font-size: 11px; }
     .avatar { fill: #FFFFFF; font-size: 15px; font-weight: 600; }
-    .stat { fill: #F0F6FC; font-size: 14px; font-weight: 650; }
+    .stat { fill: #F0F6FC; font-size: 15px; font-weight: 700; }
     .label { fill: #8B949E; font-size: 10px; }
-    .section { fill: #F0F6FC; font-size: 14px; font-weight: 650; }
-    .meta { fill: #6E7681; font-size: 9px; letter-spacing: .4px; }
+    .section { fill: #F0F6FC; font-size: 13px; font-weight: 650; }
     .month { fill: #8B949E; font-size: 9px; }
-    .footer { fill: #8B949E; font-size: 9px; }
-    .footer-value { fill: #F0F6FC; font-size: 11px; }
   </style>
-  <rect x="1" y="1" width="758" height="336" rx="12" fill="#0D1117" stroke="#30363D" />
-  <circle cx="48" cy="39" r="22" fill="#9B59B6" />
+  <rect x="1" y="1" width="758" height="338" rx="12" fill="#0D1117" stroke="#30363D" />
+  <circle cx="48" cy="39" r="22" fill="#0077B6" />
     <text x="48" y="46" class="avatar" text-anchor="middle">MO</text>
-    <text x="82" y="36" class="name">moquent</text>
+    <text x="82" y="36" class="name">Moquent</text>
     <text x="82" y="56" class="identity">@moquent · Pro</text>
-    <rect x="20" y="76" width="720" height="66" rx="10" fill="none" stroke="#30363D" />
-    <path d="M260 89v40" stroke="#30363D" />
-    <path d="M500 89v40" stroke="#30363D" />
-    <text x="140" y="105" class="stat" text-anchor="middle">5.1B</text>
-    <text x="140" y="126" class="label" text-anchor="middle">Lifetime usage</text>
-    <text x="380" y="105" class="stat" text-anchor="middle">976.5M</text>
-    <text x="380" y="126" class="label" text-anchor="middle">Max daily usage</text>
-    <text x="620" y="105" class="stat" text-anchor="middle">4 days</text>
-    <text x="620" y="126" class="label" text-anchor="middle">Current streak</text>
-    <text x="26" y="181" class="section">Codex token activity</text>
-    <text x="734" y="181" class="meta" text-anchor="end">ACCOUNT-WIDE · DAILY · 2026-08-30</text>
-    <text x="39" y="315" class="month">Sep</text>
-    <text x="91" y="315" class="month">Oct</text>
-    <text x="143" y="315" class="month">Nov</text>
-    <text x="208" y="315" class="month">Dec</text>
-    <text x="260" y="315" class="month">Jan</text>
-    <text x="312" y="315" class="month">Feb</text>
-    <text x="364" y="315" class="month">Mar</text>
-    <text x="429" y="315" class="month">Apr</text>
-    <text x="481" y="315" class="month">May</text>
-    <text x="546" y="315" class="month">Jun</text>
-    <text x="598" y="315" class="month">Jul</text>
-    <text x="650" y="315" class="month">Aug</text>
-    <rect class="activity-cell" x="26" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="26" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="39" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="52" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="65" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="78" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="91" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="104" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="117" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="130" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="143" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="156" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="169" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="182" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="195" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="208" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="221" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="234" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="247" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="260" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="273" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="286" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="299" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="312" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="325" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="338" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="351" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="364" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="377" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="390" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="403" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="416" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="429" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="442" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="455" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="468" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="481" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="494" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="507" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="520" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="533" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="546" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="559" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="572" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="585" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="598" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="611" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-20: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-21: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-23: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-24: 0 tokens</title></rect>
-    <rect class="activity-cell" x="624" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-25: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-26: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="637" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-05: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-06: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-07: 0 tokens</title></rect>
-    <rect class="activity-cell" x="650" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-08: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-09: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-10: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-11: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-12: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-13: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-14: 0 tokens</title></rect>
-    <rect class="activity-cell" x="663" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-15: 0 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-16: 0 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-17: 0 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-18: 0 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-19: 0 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="254" width="10" height="10" rx="2" fill="#00B4D8"><title>2026-08-20: 1,200,000 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="267" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-21: 8,500,000 tokens</title></rect>
-    <rect class="activity-cell" x="676" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-22: 0 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="202" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-23: 28,000,000 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="215" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-24: 95,000,000 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="228" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-25: 310,000,000 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="241" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-26: 976,500,000 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-27: 0 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-28: 0 tokens</title></rect>
-    <rect class="activity-cell" x="689" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-29: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="202" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-30: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="215" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-31: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="228" width="10" height="10" rx="2" fill="#161B22"><title>2026-09-01: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="241" width="10" height="10" rx="2" fill="#161B22"><title>2026-09-02: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="254" width="10" height="10" rx="2" fill="#161B22"><title>2026-09-03: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="267" width="10" height="10" rx="2" fill="#161B22"><title>2026-09-04: 0 tokens</title></rect>
-    <rect class="activity-cell" x="702" y="280" width="10" height="10" rx="2" fill="#161B22"><title>2026-09-05: 0 tokens</title></rect>
-    <text x="621" y="330" class="month">less</text>
-    <rect x="647" y="322" width="9" height="9" rx="2" fill="#161B22" />
-    <rect x="660" y="322" width="9" height="9" rx="2" fill="#0B3B60" />
-    <rect x="673" y="322" width="9" height="9" rx="2" fill="#0077B6" />
-    <rect x="686" y="322" width="9" height="9" rx="2" fill="#00B4D8" />
-    <rect x="699" y="322" width="9" height="9" rx="2" fill="#90E0EF" />
-    <text x="716" y="330" class="month">more</text>
+    <rect x="20" y="76" width="720" height="68" rx="10" fill="#161B22" stroke="#30363D" />
+    <path d="M140 92v42" stroke="#30363D" />
+    <path d="M260 92v42" stroke="#30363D" />
+    <path d="M380 92v42" stroke="#30363D" />
+    <path d="M500 92v42" stroke="#30363D" />
+    <path d="M620 92v42" stroke="#30363D" />
+    <text x="80" y="110" class="stat" text-anchor="middle">5.1B</text>
+    <text x="80" y="128" class="label" text-anchor="middle">Lifetime tokens</text>
+    <text x="200" y="110" class="stat" text-anchor="middle">976.5M</text>
+    <text x="200" y="128" class="label" text-anchor="middle">Peak day</text>
+    <text x="320" y="110" class="stat" text-anchor="middle">12h 27m</text>
+    <text x="320" y="128" class="label" text-anchor="middle">Longest session</text>
+    <text x="440" y="110" class="stat" text-anchor="middle">4 days</text>
+    <text x="440" y="128" class="label" text-anchor="middle">Current streak</text>
+    <text x="560" y="110" class="stat" text-anchor="middle">9 days</text>
+    <text x="560" y="128" class="label" text-anchor="middle">Longest streak</text>
+    <text x="680" y="110" class="stat" text-anchor="middle">6 days</text>
+    <text x="680" y="128" class="label" text-anchor="middle">Active days</text>
+    <text x="26" y="183" class="section">Codex activity</text>
+    <text x="52" y="317" class="month">Sep</text>
+    <text x="104" y="317" class="month">Oct</text>
+    <text x="156" y="317" class="month">Nov</text>
+    <text x="221" y="317" class="month">Dec</text>
+    <text x="273" y="317" class="month">Jan</text>
+    <text x="325" y="317" class="month">Feb</text>
+    <text x="377" y="317" class="month">Mar</text>
+    <text x="442" y="317" class="month">Apr</text>
+    <text x="494" y="317" class="month">May</text>
+    <text x="559" y="317" class="month">Jun</text>
+    <text x="611" y="317" class="month">Jul</text>
+    <text x="663" y="317" class="month">Aug</text>
+    <rect class="activity-cell" x="26" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="26" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-08-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="39" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="52" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="65" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="78" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-09-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="91" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="104" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="117" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="130" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-10-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="143" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="156" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="169" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="182" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="195" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-11-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="208" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="221" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="234" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="247" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2025-12-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="260" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="273" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="286" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="299" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="312" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-01-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="325" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="338" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="351" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="364" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-02-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="377" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="390" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="403" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="416" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-03-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="429" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="442" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="455" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="468" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-04-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="481" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="494" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="507" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="520" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="533" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-05-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="546" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="559" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="572" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="585" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-06-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="598" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="611" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="624" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-20: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-21: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-23: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-24: 0 tokens</title></rect>
+    <rect class="activity-cell" x="637" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-25: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-26: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-29: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-30: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-07-31: 0 tokens</title></rect>
+    <rect class="activity-cell" x="650" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-01: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-02: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-03: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-04: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-05: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-06: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-07: 0 tokens</title></rect>
+    <rect class="activity-cell" x="663" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-08: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-09: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-10: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-11: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-12: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-13: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-14: 0 tokens</title></rect>
+    <rect class="activity-cell" x="676" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-15: 0 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="204" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-16: 0 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="217" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-17: 0 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="230" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-18: 0 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="243" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-19: 0 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="256" width="10" height="10" rx="2" fill="#00B4D8"><title>2026-08-20: 1,200,000 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="269" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-21: 8,500,000 tokens</title></rect>
+    <rect class="activity-cell" x="689" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-22: 0 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="204" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-23: 28,000,000 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="217" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-24: 95,000,000 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="230" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-25: 310,000,000 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="243" width="10" height="10" rx="2" fill="#90E0EF"><title>2026-08-26: 976,500,000 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="256" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-27: 0 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="269" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-28: 0 tokens</title></rect>
+    <rect class="activity-cell" x="702" y="282" width="10" height="10" rx="2" fill="#161B22"><title>2026-08-29: 0 tokens</title></rect>
+    <text x="621" y="332" class="month">less</text>
+    <rect x="647" y="324" width="9" height="9" rx="2" fill="#161B22" />
+    <rect x="660" y="324" width="9" height="9" rx="2" fill="#0B3B60" />
+    <rect x="673" y="324" width="9" height="9" rx="2" fill="#0077B6" />
+    <rect x="686" y="324" width="9" height="9" rx="2" fill="#00B4D8" />
+    <rect x="699" y="324" width="9" height="9" rx="2" fill="#90E0EF" />
+    <text x="716" y="332" class="month">more</text>
 </svg>

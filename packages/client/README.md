@@ -60,17 +60,16 @@ npx ai-usage-profile setup --remove
 
 ## Embed
 
-Paste the printed snippet into `username/username`. Camo revalidates with
-`ETag` / `Cache-Control: no-cache`.
+`setup` prints a GitHub-safe snippet (encoded `&amp;` and `%2C`). Paste that into `username/username`. Camo revalidates with `ETag` / `Cache-Control: no-cache`.
 
 ```html
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark">
+          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days">
   <source media="(prefers-color-scheme: light)"
-          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=light">
+          srcset="https://aiusage.teje.sh/u/your-login/card.svg?theme=light&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days">
   <img width="100%"
-       src="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark"
+       src="https://aiusage.teje.sh/u/your-login/card.svg?theme=dark&amp;layout=profile&amp;identity=show&amp;stats=lifetime%2Cpeak%2Clongest-chat%2Ccurrent-streak%2Clongest-streak%2Cactive-days"
        alt="Account-wide AI usage">
 </picture>
 ```
@@ -85,12 +84,11 @@ Display-only query parameters:
 | --- | --- |
 | `graph` | Contribution-style daily token grid |
 | `stats` | One to six selected statistics |
-| `profile` | Optional identity, statistics, and graph |
-| `full` | Profile layout plus provider provenance |
+| `profile` | Identity, statistics, and activity graph (default from `setup`) |
 
 Available statistics: `lifetime`, `peak`, `longest-chat`, `current-streak`,
 `longest-streak`, `active-days`, `reported-days`. Missing metrics render as an
-em dash.
+em dash. Use `&amp;` and `%2C` in README HTML so GitHub does not truncate query params.
 
 ## Refresh
 

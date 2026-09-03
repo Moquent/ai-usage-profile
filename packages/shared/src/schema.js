@@ -12,9 +12,18 @@ export const CARD = Object.freeze({
 export const LAYOUTS = Object.freeze({
   graph: { defaultHeight: 194 },
   stats: { defaultHeight: 146 },
-  profile: { defaultHeight: 338 },
-  full: { defaultHeight: 414 },
+  profile: { defaultHeight: 340 },
 });
+
+const LAYOUT_IDS = Object.freeze(Object.keys(LAYOUTS));
+
+export const layoutSchema = z.enum(LAYOUT_IDS);
+
+export function normalizeLayout(layout) {
+  return layout === "full" ? "profile" : layout;
+}
+
+const layoutQuerySchema = z.union([layoutSchema, z.literal("full")]);
 
 export const DEFAULT_STATS = Object.freeze([
   "lifetime",
@@ -24,31 +33,39 @@ export const DEFAULT_STATS = Object.freeze([
   "longest-streak",
 ]);
 
+/** Full profile README card — six stats (schema max). */
+export const DEFAULT_PROFILE_STATS = Object.freeze([
+  ...DEFAULT_STATS,
+  "active-days",
+]);
+
 export const STAT_CATALOG = Object.freeze({
-  lifetime: { label: "Lifetime usage", field: "lifetimeTokens", format: "compact" },
-  peak: { label: "Max daily usage", field: "peakDailyTokens", format: "compact" },
-  "longest-chat": { label: "Longest chat", field: "longestRunningTurnSec", format: "duration" },
+  lifetime: { label: "Lifetime tokens", field: "lifetimeTokens", format: "compact" },
+  peak: { label: "Peak day", field: "peakDailyTokens", format: "compact" },
+  "longest-chat": { label: "Longest session", field: "longestRunningTurnSec", format: "duration" },
   "current-streak": { label: "Current streak", field: "currentStreakDays", format: "days" },
   "longest-streak": { label: "Longest streak", field: "longestStreakDays", format: "days" },
   "active-days": { label: "Active days", derived: "activeDays", format: "days" },
-  "reported-days": { label: "Days reported", derived: "reportedDays", format: "days" },
+  "reported-days": { label: "Days tracked", derived: "reportedDays", format: "days" },
 });
 
 export const PALETTES = Object.freeze({
   dark: {
     background: "#0D1117",
     border: "#30363D",
+    surface: "#161B22",
+    accent: "#0077B6",
     primary: "#F0F6FC",
     secondary: "#8B949E",
-    muted: "#6E7681",
     cells: ["#161B22", "#0B3B60", "#0077B6", "#00B4D8", "#90E0EF"],
   },
   light: {
     background: "#FFFFFF",
     border: "#D0D7DE",
+    surface: "#F6F8FA",
+    accent: "#0077B6",
     primary: "#1F2328",
     secondary: "#57606A",
-    muted: "#6E7781",
     cells: ["#EBEDF0", "#CAF0F8", "#90E0EF", "#00B4D8", "#0077B6"],
   },
 });
@@ -84,6 +101,38 @@ export function resolvePublicOrigin(explicit, env = process.env) {
 
 export function publicCardUrl(origin, slug) {
   return new URL(`/u/${String(slug).toLowerCase()}/card.svg`, origin).toString();
+}
+
+export function buildCardSvgQuery({
+  theme = "dark",
+  layout = "profile",
+  stats = DEFAULT_PROFILE_STATS,
+  identity = "show",
+} = {}) {
+  const params = new URLSearchParams();
+  params.set("theme", theme);
+  if (layout) params.set("layout", layout);
+  if (identity) params.set("identity", identity);
+  if (stats?.length) params.set("stats", stats.join(","));
+  return params.toString();
+}
+
+export function buildCardSvgUrl(origin, slug, options = {}) {
+  return `${publicCardUrl(origin, slug)}?${buildCardSvgQuery(options)}`;
+}
+
+function escapeHtmlAttribute(value) {
+  return String(value).replaceAll("&", "&amp;");
+}
+
+export function readmeCardSnippet(origin, slug, { alt = "Account-wide AI usage", ...options } = {}) {
+  const dark = buildCardSvgUrl(origin, slug, { theme: "dark", ...options });
+  const light = buildCardSvgUrl(origin, slug, { theme: "light", ...options });
+  return `<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="${escapeHtmlAttribute(dark)}">
+  <source media="(prefers-color-scheme: light)" srcset="${escapeHtmlAttribute(light)}">
+  <img width="100%" src="${escapeHtmlAttribute(dark)}" alt="${escapeXml(alt)}">
+</picture>`;
 }
 
 export function escapeXml(value) {
@@ -142,7 +191,6 @@ export const usageSnapshotSchema = z
     daily: [...snapshot.daily].sort((left, right) => left.date.localeCompare(right.date)),
   }));
 
-export const layoutSchema = z.enum(Object.keys(LAYOUTS));
 export const statIdSchema = z.enum(Object.keys(STAT_CATALOG));
 export const labelsSchema = z.partialRecord(statIdSchema, z.string().trim().min(1).max(28));
 export const statsSchema = z.array(statIdSchema).max(6).superRefine((stats, context) => {
@@ -155,8 +203,8 @@ export const githubSlugSchema = z.string().trim().toLowerCase()
   .regex(/^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/, "must be a GitHub-compatible slug");
 
 const cardPresentationDefaults = {
-  layout: layoutSchema.default("graph"),
-  stats: statsSchema.default([...DEFAULT_STATS]),
+  layout: layoutSchema.default("profile"),
+  stats: statsSchema.default([...DEFAULT_PROFILE_STATS]),
   labels: labelsSchema.default({}),
   identity: z.boolean().default(true),
 };
@@ -185,7 +233,7 @@ export const cardOptionsSchema = refineStatsLayout(z.object({
 
 const cardQuerySchema = z.object({
   theme: z.enum(Object.keys(PALETTES)).default("dark"),
-  layout: layoutSchema.optional(),
+  layout: layoutQuerySchema.optional(),
   stats: z.string().optional(),
   identity: z.enum(["show", "hide"]).optional(),
 });
@@ -198,7 +246,7 @@ export const publishEnvelopeSchema = z.object({
 
 export const presentationCardFieldsSchema = z.object({
   username: z.string().optional(),
-  layout: layoutSchema.optional(),
+  layout: layoutQuerySchema.optional(),
   stats: statsSchema.optional(),
   labels: labelsSchema.optional(),
   identity: z.boolean().optional(),
@@ -285,12 +333,28 @@ export function presentationOverridesFromCli(options) {
   );
 }
 
-export function presentationCardFromCli(options, slug) {
-  const overrides = presentationOverridesFromCli(options);
-  return presentationCardFieldsSchema.parse({
-    username: overrides.username ?? slug,
+export function presentationCard(username, overrides = {}) {
+  const parsed = presentationCardFieldsSchema.parse({
+    ...overrides,
+    username: overrides.username ?? username,
+  });
+  return presentationConfigSchema.parse({
+    ...parsed,
+    ...(parsed.layout === undefined ? {} : { layout: normalizeLayout(parsed.layout) }),
+  });
+}
+
+export function publishedCardPresentation(username, overrides = {}) {
+  return presentationCard(username, {
+    layout: "profile",
+    identity: true,
+    stats: [...DEFAULT_PROFILE_STATS],
     ...overrides,
   });
+}
+
+export function presentationCardFromCli(options, slug) {
+  return presentationCard(slug, presentationOverridesFromCli(options));
 }
 
 export function toCardOptions(presentation, { theme = "dark", generatedAt = new Date() } = {}) {
@@ -309,7 +373,7 @@ export function cardOptionsFromQuery(searchParams, presentation, generatedAt = n
   const query = cardQuerySchema.parse(Object.fromEntries(searchParams));
   return cardOptionsSchema.parse({
     ...toCardOptions(presentation, { theme: query.theme, generatedAt }),
-    ...(query.layout === undefined ? {} : { layout: query.layout }),
+    ...(query.layout === undefined ? {} : { layout: normalizeLayout(query.layout) }),
     ...(query.stats === undefined ? {} : { stats: parseStatsParam(query.stats) }),
     ...(query.identity === undefined ? {} : { showIdentity: query.identity === "show" }),
   });

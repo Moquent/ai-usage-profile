@@ -36,9 +36,10 @@ describe("card rendering", () => {
   it("renders a compact graph layout", () => {
     const svg = render("graph");
     expect(svg).toMatch(/viewBox="0 0 760 194"/);
-    expect(svg).toMatch(/Codex token activity|ACCOUNT-WIDE · DAILY · 2026-08-27/);
+    expect(svg).toMatch(/Codex activity/);
+    expect(svg).not.toMatch(/ACCOUNT-WIDE|OpenAI Codex App Server/);
     expect((svg.match(/class="activity-cell"/g) ?? []).length).toBe(371);
-    expect(svg).not.toMatch(/5\.1B|@moquent|Lifetime usage/);
+    expect(svg).not.toMatch(/5\.1B|@moquent|Lifetime tokens/);
   });
 
   it("renders stats without the activity grid", () => {
@@ -49,14 +50,18 @@ describe("card rendering", () => {
     expect(svg).not.toMatch(/class="activity-cell"/);
   });
 
-  it("composes profile and full layouts from the same modules", () => {
+  it("composes the profile layout without provenance footer", () => {
     const profile = render("profile");
-    const full = render("full");
-    expect(profile).toMatch(/viewBox="0 0 760 338"/);
+    expect(profile).toMatch(/viewBox="0 0 760 340"/);
     expect((profile.match(/class="activity-cell"/g) ?? []).length).toBe(371);
-    expect(profile).not.toMatch(/>Scope</);
-    expect(full).toMatch(/viewBox="0 0 760 414"/);
-    expect(full).toMatch(/>Scope|OpenAI Codex App Server/);
+    expect(profile).toMatch(/Lifetime tokens|Peak day/);
+    expect(profile).not.toMatch(/Scope|OpenAI Codex App Server|Days tracked/);
+  });
+
+  it("maps legacy full layout to profile", () => {
+    const svg = render("full");
+    expect(svg).toMatch(/viewBox="0 0 760 340"/);
+    expect(svg).not.toMatch(/Scope|OpenAI Codex App Server/);
   });
 
   it("supports stat selection, reordering, relabeling, and detached identity", () => {
@@ -75,7 +80,7 @@ describe("card rendering", () => {
     expect(render("profile", { stats: [] })).toMatch(/viewBox="0 0 760 252"/);
     expect(
       render("profile", { stats: ["lifetime", "peak", "reported-days"], showIdentity: false }),
-    ).toMatch(/viewBox="0 0 760 282"/);
+    ).toMatch(/viewBox="0 0 760 284"/);
   });
 
   it("keeps every layout pure and GitHub-safe", () => {
@@ -94,12 +99,12 @@ describe("card rendering", () => {
       },
       username: "a<b&c",
       theme: "dark",
-      layout: "full",
+      layout: "profile",
       statLabels: { lifetime: "All <tokens> & usage" },
       generatedAt,
     });
-    expect(svg).toMatch(/a&lt;b&amp;c|All &lt;tokens&gt; &amp; usage|A&lt;B|C&amp;D/);
-    expect(svg).not.toMatch(/a<b&c/);
+    expect(svg).toMatch(/a&lt;b&amp;c|All &lt;tokens&gt; &amp; usage|A&lt;B/);
+    expect(svg).not.toMatch(/a<b&c|C&amp;D/);
   });
 
   it("uses provider metadata without provider-specific branches", () => {
@@ -113,11 +118,11 @@ describe("card rendering", () => {
       snapshot,
       username: "Moquent",
       theme: "dark",
-      layout: "full",
+      layout: "profile",
       generatedAt,
     });
-    expect(svg).toMatch(/Claude Code token activity|@moquent · Claude Code|Test adapter|>—</);
-    expect(svg).not.toMatch(/Codex/);
+    expect(svg).toMatch(/Claude Code activity|@moquent|>—</);
+    expect(svg).not.toMatch(/Codex|Test adapter/);
   });
 
   it("rejects invalid configuration and snapshots", () => {

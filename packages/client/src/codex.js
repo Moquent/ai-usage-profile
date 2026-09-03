@@ -156,7 +156,7 @@ export class CodexProvider {
     const client = this.clientFactory(this.clientOptions);
     await client.start();
     try {
-      const accountPayload = await client.request("account/read", { refreshToken: false });
+      const accountPayload = await client.request("account/read", { refreshToken: true });
       const account = accountPayload?.account ?? null;
       if (account !== null && typeof account?.type !== "string") {
         throw new Error("Codex account/read returned an invalid account payload");

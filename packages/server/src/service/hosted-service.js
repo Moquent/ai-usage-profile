@@ -17,7 +17,8 @@ import {
   errorResponseSchema,
   formatValidationError,
   getProviderMetadata,
-  presentationConfigSchema,
+  presentationCard,
+  publishedCardPresentation,
   profileIdParamsSchema,
   profileResponseSchema,
   profileSlugParamsSchema,
@@ -99,10 +100,6 @@ function cardUrl(request, profile, configuredBaseUrl) {
   return publicCardUrl(requestOrigin(request, configuredBaseUrl), profile.slug);
 }
 
-function presentationCard(username, overrides = {}) {
-  return presentationConfigSchema.parse({ username, ...overrides });
-}
-
 function snapshotStatus(profile, snapshot, url) {
   return {
     profileId: profile.id,
@@ -142,8 +139,11 @@ async function publishRenderedCards(cardStore, profile, envelope, result) {
   if (!cardStore) return;
   const generatedAt = new Date(envelope.collectedAt);
   const meta = { revision: result.revision, collectedAt: envelope.collectedAt };
+  const presentation = publishedCardPresentation(profile.card.username, {
+    labels: profile.card.labels ?? {},
+  });
   for (const theme of ["dark", "light"]) {
-    const card = toCardOptions(profile.card, { theme, generatedAt });
+    const card = toCardOptions(presentation, { theme, generatedAt });
     const svg = renderCard({
       snapshot: envelope.snapshot,
       username: profile.card.username,
@@ -363,7 +363,7 @@ export async function createHostedService({
   }, async (request, reply) => {
     const existing = await store.getProfileById(request.params.id);
     if (!existing) return reply.code(404).send(errorPayload(request, "not_found", "Profile not found"));
-    const card = presentationConfigSchema.parse({ ...existing.card, ...request.body.card });
+    const card = presentationCard(existing.card.username, { ...existing.card, ...request.body.card });
     const profile = await store.updateProfile(existing.id, card);
     return publicProfile(request, profile, publicBaseUrl);
   });
@@ -420,7 +420,7 @@ export async function createHostedService({
         githubUserId: githubUser.id,
         login: githubUser.login,
         providerId: "codex",
-        card: presentationCard(githubUser.login, { identity: false }),
+        card: publishedCardPresentation(githubUser.login),
         publishTokenHash: GITHUB_BOUND_TOKEN_HASH,
       });
     } catch (error) {
